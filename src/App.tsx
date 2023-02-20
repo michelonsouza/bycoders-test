@@ -1,25 +1,27 @@
-import { useEffect, useState } from 'react'
-import './App.css'
+/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable react/no-danger */
+import { useEffect, useState } from 'react';
 
-import {Pagination, VideoResource} from './models';
-import {getVideos} from './services';
+import { ThemeProvider } from '@mui/material';
 
-function App() {
+import youTubeIcon from './assets/you-tube-icon-dark.svg';
+import { AppLayout } from './layouts';
+import { Pagination, VideoResource } from './models';
+import { getVideos } from './services';
+import { light } from './theme';
+
+function App(): JSX.Element {
   const [data, setData] = useState<Pagination<VideoResource> | null>(null);
 
-  useEffect(() => {
-    getVideos().then(newData => setData(newData));
-  }, [])
+  // useEffect(() => {
+  //   getVideos().then(newData => setData(newData));
+  // }, []);
 
   return (
-    <div className="App">
-      <div className="video-container">
-        {data?.items?.map(video => (
-          <div key={video.id} dangerouslySetInnerHTML={{__html: video.player.embedHtml}} />
-        ))}
-      </div>
-    </div>
-  )
+    <ThemeProvider theme={light}>
+      <AppLayout />
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
