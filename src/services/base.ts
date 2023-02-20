@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import axios from 'axios';
 
 const baseApi = axios.create({
@@ -10,9 +11,9 @@ baseApi.interceptors.request.use(config => {
     key: import.meta.env.VITE_APP_API_SECRET,
     regionCode: import.meta.env.VITE_APP_API_PARAM_REGION_CODE,
     maxResults: import.meta.env.VITE_APP_API_PARAM_MAX_RESULTS,
-  }
+  };
 
   return config;
 });
 
-export {baseApi};
+export { baseApi };

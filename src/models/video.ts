@@ -55,7 +55,7 @@ interface Thumbnails {
     url: string;
     width: number;
     height: number;
-  }
+  };
 }
 
 interface Player {
@@ -98,14 +98,14 @@ interface VideoStream {
   codec: string;
   bitrateBps: number;
   rotation: string;
-  vendor: string
+  vendor: string;
 }
 
 interface AudioStream {
   channelCount: number;
   codec: string;
   bitrateBps: number;
-  vendor: string
+  vendor: string;
 }
 
 interface FileDetails {
@@ -118,7 +118,7 @@ interface FileDetails {
   durationMs: number;
   bitrateBps: number;
   recordingLocation: GeoLocation;
-  creationTime: string
+  creationTime: string;
 }
 
 interface ProcessingProgress {
@@ -140,7 +140,7 @@ interface ProcessingDetails {
 
 interface TagSuggestions {
   tag: string;
-  categoryRestricts:string[]
+  categoryRestricts: string[];
 }
 
 interface Sugestions {
