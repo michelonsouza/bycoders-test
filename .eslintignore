@@ -1,0 +1,11 @@
+node_modules
+build
+dist
+serverless-single-page-app-plugin
+theme/default/fonts/*
+
+*.svg
+*.png
+*.jpg
+*.jpeg
+*.css
