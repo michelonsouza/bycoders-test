@@ -3,6 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "npm": "You must run yarn in this project",
+    "yarn": "1.22.x"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
